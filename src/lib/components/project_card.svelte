@@ -3,16 +3,15 @@
   let { info }: { info: ProjectInfo } = $props();
 </script>
 
-<Card.Root>
+<Card.Root class="font-body dark:hover:border-white hover:border-gray-900">
   <Card.Header>
-    <Card.Title
-      >{info.title}
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex obcaecati architecto
-      modi sapiente voluptatibus quisquam vel ducimus fugiat quam unde tempora ipsam
-      aperiam, rem minus accusamus nulla a temporibus quia?
-    </Card.Title>
+    <Card.Title tag="h4" class="font-bold">{info.title}</Card.Title>
   </Card.Header>
   <Card.Content>
-    <p>{info.description}</p>
+    <p>
+      {info.description}
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex obcaecati architecto
+      modi sapiente voluptatibus quisquam vel ducimus fugiat quam
+    </p>
   </Card.Content>
 </Card.Root>

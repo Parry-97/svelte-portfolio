@@ -7,4 +7,5 @@ type BlogInfo = {
 type ProjectInfo = {
   title: string;
   description: string;
+  link: string;
 };

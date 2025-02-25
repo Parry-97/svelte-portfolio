@@ -1,5 +1,6 @@
 <script lang="ts">
   import BlogCard from "$lib/components/blog_card.svelte";
+  import ProjectCard from "$lib/components/project_card.svelte";
 
   let { data } = $props();
 </script>
@@ -26,6 +27,11 @@
 
     <div>
       <h2 class="text-4xl font-bold font-body">Top Projects</h2>
+      <div class="mt-8 flex flex-col gap-8">
+        {#each data.project_infos as info}
+          <a href={info.link}><ProjectCard {info}></ProjectCard></a>
+        {/each}
+      </div>
     </div>
   </div>
 </div>

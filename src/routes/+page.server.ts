@@ -12,13 +12,21 @@ let blog_infos: BlogInfo[] = [
 ];
 
 let project_infos: ProjectInfo[] = [
-  {
-    title: "Rusty Leetcode",
-    description: "This is a description of the article",
-  },
+  // {
+  //   title: "Rusty Leetcode",
+  //   description: "This is a description of the article",
+  //   link: "/",
+  // },
+  //
   {
     title: "Simpla",
     description: "This is a description of the article",
+    link: "/",
+  },
+  {
+    title: "ClusterRecommend",
+    description: "This is a description of the article",
+    link: "/",
   },
 ];
 export function load() {
