@@ -39,7 +39,7 @@
   </nav>
 
   <div class="mt-6 grid grid-cols-3 h-full align-middle">
-    >{@render children()}
+    {@render children()}
   </div>
 
   <Separator class="w-1/3 mx-auto mt-10"></Separator>
