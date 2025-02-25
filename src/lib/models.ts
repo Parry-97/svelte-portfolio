@@ -2,6 +2,7 @@ type BlogInfo = {
   title: string;
   tags: string[];
   description: string;
+  link: string;
 };
 
 type ProjectInfo = {

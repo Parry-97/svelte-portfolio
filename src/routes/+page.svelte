@@ -1,11 +1,15 @@
 <script lang="ts">
   import BlogCard from "$lib/components/blog_card.svelte";
   import ProjectCard from "$lib/components/project_card.svelte";
+  import { fly } from "svelte/transition";
 
   let { data } = $props();
 </script>
 
-<div class="mt-6 grid grid-cols-3 h-full align-middle">
+<div
+  in:fly={{ x: -200, duration: 300, delay: 300 }}
+  out:fly={{ x: 200, duration: 300 }}
+>
   <div class="col-span-1 col-start-2 flex flex-col gap-14">
     <h1 class="text-5xl font-bold font-body">Hey, I'm Param</h1>
     <p class="font-body text-gray-500 mt-8">

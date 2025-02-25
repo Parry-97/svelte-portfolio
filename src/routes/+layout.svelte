@@ -7,6 +7,7 @@
   let { children } = $props();
   import { ModeWatcher, toggleMode } from "mode-watcher";
   import { Separator } from "$lib/components/ui/separator";
+  import { fly } from "svelte/transition";
   // Check out this hf space for logo: enzostvs/Logo.Ai
 </script>
 
@@ -37,7 +38,9 @@
     </div>
   </nav>
 
-  {@render children()}
+  <div class="mt-6 grid grid-cols-3 h-full align-middle">
+    >{@render children()}
+  </div>
 
   <Separator class="w-1/3 mx-auto mt-10"></Separator>
 

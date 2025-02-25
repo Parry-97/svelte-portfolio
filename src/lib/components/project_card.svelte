@@ -8,7 +8,7 @@
     <Card.Title tag="h4" class="font-bold">{info.title}</Card.Title>
   </Card.Header>
   <Card.Content>
-    <p>
+    <p class="text-gray-600 dark:text-gray-300">
       {info.description}
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex obcaecati architecto
       modi sapiente voluptatibus quisquam vel ducimus fugiat quam
