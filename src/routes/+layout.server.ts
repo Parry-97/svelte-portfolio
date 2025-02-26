@@ -3,13 +3,13 @@ let blog_infos: BlogInfo[] = [
     title: "Yet another article",
     description: "This is a description of the article",
     tags: ["Frontend", "Svelte", "Typescript", "Programming"],
-    link: "/blogs/other-article",
+    id: "other-article",
   },
   {
     title: "Rust article",
     description: "This is a description of the article",
     tags: ["Rust", "Backend", "Programmming"],
-    link: "/blogs/rust-article",
+    id: "rust-article",
   },
 ];
 

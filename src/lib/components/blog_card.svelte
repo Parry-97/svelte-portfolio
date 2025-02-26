@@ -1,10 +1,18 @@
 <script lang="ts">
+  import { goto } from "$app/navigation";
   import { Separator } from "./ui/separator";
 
   let { info }: { info: BlogInfo } = $props();
 </script>
 
-<div>
+<!-- TODO: Consider accesibility issues -->
+<!-- svelte-ignore a11y_interactive_supports_focus -->
+<!-- svelte-ignore a11y_click_events_have_key_events -->
+<div
+  role="link"
+  style="cursor: pointer;"
+  onclick={() => goto(`/blogs/${info.id}`)}
+>
   <h3 class="text-3xl font-body font-bold">{info.title}</h3>
   <p class="font-body mt-3 text-gray-500">
     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis minus

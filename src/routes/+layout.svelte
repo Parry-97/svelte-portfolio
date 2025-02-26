@@ -7,8 +7,6 @@
   let { children } = $props();
   import { ModeWatcher, toggleMode } from "mode-watcher";
   import { Separator } from "$lib/components/ui/separator";
-  import { fly } from "svelte/transition";
-  // Check out this hf space for logo: enzostvs/Logo.Ai
 </script>
 
 <ModeWatcher></ModeWatcher>
@@ -54,9 +52,13 @@
       </div>
 
       <div class="flex flex-col gap-5 col-start-2">
-        <a class="hover:underline" href="/about">Linkedin</a>
-        <a class="hover:underline" href="/about">Github</a>
-        <a class="hover:underline" href="/about">Twitter</a>
+        <a
+          class="hover:underline"
+          href="https://www.linkedin.com/in/param-pal-singh-251324212/"
+          >Linkedin</a
+        >
+        <a class="hover:underline" href="https://github.com/Parry-97">Github</a>
+        <!-- <a class="hover:underline" href="/about">Twitter</a> -->
       </div>
 
       <div class="flex flex-col gap-5 col-start-3">
