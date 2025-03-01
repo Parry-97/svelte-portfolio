@@ -1,0 +1,34 @@
+<script>
+  import ProjectCard from "$lib/components/project_card.svelte";
+  import { Button } from "$lib/components/ui/button";
+  import { Input } from "$lib/components/ui/input";
+  import { SearchIcon } from "lucide-svelte";
+  import { fly } from "svelte/transition";
+
+  let { data } = $props();
+</script>
+
+<div
+  in:fly={{ x: -200, duration: 300, delay: 300 }}
+  out:fly={{ x: 200, duration: 300 }}
+  class="col-span-1 col-start-2 flex flex-col gap-y-14"
+>
+  <h1 class="text-5xl font-bold font-body">Projects</h1>
+  <p class="font-body text-gray-500">
+    Hey, I'm Param. I'm a Software Engineer, blogger and tinkerer. Here are some
+    of the projects I've been working on.
+  </p>
+
+  <form class="flex w-full items-center space-x-2">
+    <Input type="email" placeholder="Search projects" />
+    <Button variant="outline" type="submit" size="icon"><SearchIcon /></Button>
+  </form>
+
+  <div>
+    <div class="mt-8 flex flex-col gap-8">
+      {#each data.project_infos as info}
+        <a href={info.link}><ProjectCard {info}></ProjectCard></a>
+      {/each}
+    </div>
+  </div>
+</div>
