@@ -15,8 +15,9 @@
 >
   <h1 class="text-5xl font-bold font-body">Blogs</h1>
   <p class="font-body text-gray-500">
-    There are {data.blog_infos.length} articles on this site. Use tags to get articles
-    based on different tags. Use the search below to filter by title.
+    There are {data.blog_infos.length} articles on this site. Use
+    <a class="text-blue-400 underline" href="/tags">tags</a> to get articles based
+    on different tags. Use the search below to filter by title.
   </p>
 
   <form class="flex w-full items-center space-x-2">

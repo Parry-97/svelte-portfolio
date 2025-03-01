@@ -31,6 +31,26 @@ let project_infos: ProjectInfo[] = [
   },
 ];
 
+let tags = [
+  "Frontend",
+  "Backend",
+  "Rust",
+  "Typescript",
+  "Machine Learning",
+  "System Design",
+  "Cloud Computing",
+  "SvelteKit",
+  "Microsoft Azure",
+  "IaC",
+  "Terraform",
+  "Bicep",
+  "DevOps",
+];
+
+export function getTags(): string[] {
+  return tags;
+}
+
 export function getProjectInfos(): ProjectInfo[] {
   return project_infos;
 }

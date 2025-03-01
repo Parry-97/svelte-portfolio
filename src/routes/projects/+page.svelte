@@ -20,8 +20,8 @@
   </p>
 
   <form class="flex w-full items-center space-x-2">
-    <Input type="email" placeholder="Search projects" />
-    <Button variant="outline" type="submit" size="icon"><SearchIcon /></Button>
+    <Input type="search" placeholder="Search projects" />
+    <!-- <Button variant="outline" type="submit" size="icon"><SearchIcon /></Button> -->
   </form>
 
   <div>

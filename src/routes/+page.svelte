@@ -13,7 +13,7 @@
 >
   <h1 class="text-5xl font-bold font-body">Hey, I'm Param</h1>
   <p class="font-body text-gray-500 mt-8">
-    I'm a developer and creator. I work as the Software Developer at XYZ. You’ve
+    I'm a developer and creator. I work as the Software Engineer at XYZ. You’ve
     found my personal slice of the internet – while you're here <a
       class="text-blue-400 underline"
       href="/about">learn more about me</a
