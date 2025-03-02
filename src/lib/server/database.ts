@@ -55,8 +55,10 @@ export function getProjectInfos(): ProjectInfo[] {
   return project_infos;
 }
 
-export function getBlogInfos(): BlogInfo[] {
-  return blog_infos;
+export function getBlogInfos(tag: string | null): BlogInfo[] {
+  return tag
+    ? blog_infos.filter((blog) => blog.tags.includes(tag))
+    : blog_infos;
 }
 
 export function getBlogInfo(id: string): BlogInfo | undefined {

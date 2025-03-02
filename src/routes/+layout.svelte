@@ -31,7 +31,7 @@
     <div class="flex gap-5 col-start-5 col-span-1 row-start-2">
       <a class="hover:underline" href="/">Home</a>
       <a class="hover:underline" href="/about">About</a>
-      <a class="hover:underline" href="/blogs">Blog</a>
+      <a class="hover:underline" href="/blogs">Blogs</a>
       <a class="hover:underline" href="/projects">Projects</a>
     </div>
   </nav>
@@ -47,7 +47,7 @@
       <div class="flex flex-col gap-5 col-start-1 col-span-1">
         <a class="hover:underline" href="/">Home</a>
         <a class="hover:underline" href="/about">About</a>
-        <a class="hover:underline" href="/blogs">Blog</a>
+        <a class="hover:underline" href="/blogs">Blogs</a>
         <a class="hover:underline" href="/projects">Projects</a>
       </div>
 
