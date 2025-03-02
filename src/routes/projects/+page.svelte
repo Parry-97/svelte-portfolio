@@ -1,10 +1,11 @@
-<script>
+<script lang="ts">
   import ProjectCard from "$lib/components/project_card.svelte";
   import { Button } from "$lib/components/ui/button";
   import { Input } from "$lib/components/ui/input";
   import { SearchIcon } from "lucide-svelte";
   import { fly } from "svelte/transition";
 
+  let value = $state<string>("");
   let { data } = $props();
 </script>
 
@@ -19,16 +20,18 @@
     of the projects I've been working on.
   </p>
 
-  <form class="flex w-full items-center space-x-2">
-    <Input type="search" placeholder="Search projects" />
+  <div class="flex w-full items-center space-x-2">
+    <Input bind:value type="search" placeholder="Search projects" />
     <Button disabled={true} variant="outline" type="submit" size="icon"
       ><SearchIcon /></Button
     >
-  </form>
+  </div>
 
   <div>
     <div class="mt-8 flex flex-col gap-8">
-      {#each data.project_infos as info}
+      {#each value ? data.project_infos.filter((bi) => bi.title
+              .toLowerCase()
+              .includes(value)) : data.project_infos as info}
         <a href={info.link}><ProjectCard {info}></ProjectCard></a>
       {/each}
     </div>

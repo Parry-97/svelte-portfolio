@@ -1,10 +1,11 @@
-<script>
+<script lang="ts">
   import BlogCard from "$lib/components/blog_card.svelte";
   import { Button } from "$lib/components/ui/button";
   import { Input } from "$lib/components/ui/input";
   import { SearchIcon } from "lucide-svelte";
   import { fly } from "svelte/transition";
 
+  let value = $state<string>("");
   let { data } = $props();
 </script>
 
@@ -20,26 +21,30 @@
     on different tags. Use the search below to filter by title.
   </p>
 
-  <form class="flex w-full items-center space-x-2">
-    <Input type="email" placeholder="Search articles" />
+  <div class="flex w-full items-center space-x-2">
+    <Input bind:value type="email" placeholder="Search articles" />
     <Button disabled={true} variant="outline" type="submit" size="icon"
       ><SearchIcon /></Button
     >
-  </form>
-
-  <div>
-    <h2 class="text-4xl font-bold font-body">Most Recent</h2>
-    <div class="mt-6 flex flex-col gap-8">
-      {#each data.blog_infos as info}
-        <BlogCard {info}></BlogCard>
-      {/each}
-    </div>
   </div>
+
+  {#if !value}
+    <div>
+      <h2 class="text-4xl font-bold font-body">Most Recent</h2>
+      <div class="mt-6 flex flex-col gap-8">
+        {#each data.blog_infos as info}
+          <BlogCard {info}></BlogCard>
+        {/each}
+      </div>
+    </div>
+  {/if}
 
   <div>
     <h2 class="text-4xl font-bold font-body">All Posts</h2>
     <div class="mt-6 flex flex-col gap-8">
-      {#each data.blog_infos as info}
+      {#each value ? data.blog_infos.filter((bi) => bi.title
+              .toLowerCase()
+              .includes(value)) : data.blog_infos as info}
         <BlogCard {info}></BlogCard>
       {/each}
     </div>
