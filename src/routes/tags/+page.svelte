@@ -18,7 +18,7 @@
   <div class="flex gap-4 mt-2 flex-wrap">
     {#each data.tags ?? [] as tag}
       <a
-        href={`/tags/${tag.toLowerCase()}`}
+        href={`/tags/${tag.toLowerCase().replace(" ", "-")}`}
         class="text-gray-500 font-body text-xs hover:text-white"
         >{tag.toUpperCase()}</a
       >
