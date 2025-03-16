@@ -18,7 +18,7 @@
 >
   <h1 class="text-5xl font-bold font-body">{id.toUpperCase()}</h1>
   <p class="font-body text-gray-500">
-    There are {data.blogs.length} articles that belongs to the tag
+    There are {data.blog_infos.length} articles that belongs to the tag
     <span class="underline text-blue-500">{id}</span>. Articles which belongs
     only to the tag <span class="underline text-blue-500">{id}</span>
     will appear here. A particular article may belong to multiple tags. Use the search

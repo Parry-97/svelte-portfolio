@@ -23,6 +23,9 @@
   <div class="flex gap-5 mt-2">
     {#each info.tags as tag}
       <a
+        onclick={(evt) => {
+          evt.stopPropagation();
+        }}
         href={`/tags/${tag.toLowerCase()}`}
         class="text-gray-500 font-body text-xs hover:text-white"
         >{tag.toUpperCase()}</a
