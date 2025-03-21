@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { invalidate } from "$app/navigation";
   import { fly } from "svelte/transition";
   let { data } = $props();
 </script>

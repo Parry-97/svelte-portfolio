@@ -1,19 +1,14 @@
 <script lang="ts">
-  import { goto } from "$app/navigation";
+  import { invalidate } from "$app/navigation";
   import { Separator } from "./ui/separator";
 
   let { info }: { info: BlogInfo } = $props();
 </script>
 
-<!-- TODO: Consider accesibility issues -->
-<!-- svelte-ignore a11y_interactive_supports_focus -->
-<!-- svelte-ignore a11y_click_events_have_key_events -->
-<div
-  role="link"
-  style="cursor: pointer;"
-  onclick={() => goto(`/blogs/${info.id}`)}
->
-  <h3 class="text-3xl font-body font-bold">{info.title}</h3>
+<div>
+  <a href={`/blogs/${info.id}`} class="text-3xl font-body font-bold"
+    >{info.title}</a
+  >
   <p class="font-body mt-3 text-gray-500">
     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis minus
     culpa debitis minima, illum dignissimos quasi similique sapiente iusto,
@@ -23,13 +18,15 @@
   <div class="flex gap-5 mt-2">
     {#each info.tags as tag}
       <a
-        onclick={(evt) => {
-          evt.stopPropagation();
-        }}
         href={`/tags/${tag.toLowerCase()}`}
         class="text-gray-500 font-body text-xs hover:text-white"
-        >{tag.toUpperCase()}</a
+        onclick={(evt) => {
+          evt.stopPropagation();
+          invalidate("/tags/");
+        }}
       >
+        {tag.toUpperCase()}
+      </a>
     {/each}
   </div>
 
