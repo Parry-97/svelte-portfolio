@@ -58,9 +58,9 @@ export function getProjectInfos(): ProjectInfo[] {
   return project_infos;
 }
 
-export async function getBlogInfos(tag: string | null): Promise<BlogInfo[]> {
+export async function getBlogInfos(tag: string | null): Promise<Blog[]> {
   const blogs = await getBlogs();
-  return tag ? blogs.filter((blog) => blog.tags.includes(tag)) : blogs;
+  return blogs;
 }
 
 async function getBlogs() {
@@ -70,11 +70,10 @@ async function getBlogs() {
 
   for (const path in paths) {
     const file = paths[path];
-    console.log(file);
     const id = path.split("/").at(-1)?.replace(".md", "");
 
     if (file && typeof file === "object" && "metadata" in file && id) {
-      const metadata = file.metadata as Omit<Blog, "slug">;
+      const metadata = file.metadata as Omit<Blog, "id">;
       const blog = { ...metadata, id } satisfies Blog;
       blogs.push(blog);
     }

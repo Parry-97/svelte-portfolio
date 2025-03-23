@@ -1,27 +1,10 @@
 ---
 id: fallible_destructors
-aliases: []
+description: Introduction to the problem of implementing `Drop` in Rust, and a workaround using the `Option` newtype pattern to handle fallible destructors.
 tags:
   - rust
-  # - book
-  # - chatgpt
-  # - intermediate
-documentation: https://chatgpt.com/c/66f7d327-d3bc-8000-ac6a-2ae713f736a1
 title: Fallible Destructors
 ---
-
-<!--toc:start-->
-
-- [1. **The Problem with Implementing `Drop` in Rust**](#1-the-problem-with-implementing-drop-in-rust)
-  - [a. **No Moving Out of Fields in Destructors**](#a-no-moving-out-of-fields-in-destructors)
-  - [b. **`drop` Takes `&mut self`, Not `self`**](#b-drop-takes-mut-self-not-self)
-- [2. **Workaround with `Option` Newtype Wrapper**](#2-workaround-with-option-newtype-wrapper)
-  - [a. **Newtype Pattern with `Option`**](#a-newtype-pattern-with-option)
-  - [b. **Option and `Option::take`**](#b-option-and-optiontake)
-- [3. **Handling the Downside**](#3-handling-the-downside)
-- [4. **Trade-offs of the Approach**](#4-trade-offs-of-the-approach)
-- [5. **Conclusion**](#5-conclusion)
-<!--toc:end-->
 
 This paragraph addresses a fundamental issue with the use of **explicit destructors** (manual cleanup methods) in Rust, particularly when a type implements the `Drop` trait for cleanup. The problem arises from the interaction between ownership, borrowing, and Rust's move semantics in destructors. Let's break it down step-by-step.
 
