@@ -44,7 +44,7 @@
     <div class="mt-6 flex flex-col gap-8">
       {#each value ? data.blog_infos.filter((bi) => bi.title
               .toLowerCase()
-              .includes(value)) : data.blog_infos as info}
+              .includes(value.toLowerCase())) : data.blog_infos as info}
         <BlogCard {info}></BlogCard>
       {/each}
     </div>

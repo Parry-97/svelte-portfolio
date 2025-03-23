@@ -23,7 +23,7 @@
   <div>
     <h2 class="text-4xl font-bold font-body">Most Recent</h2>
     <div class="mt-6 flex flex-col gap-8">
-      {#each data.blog_infos as info}
+      {#each data.blog_infos ?? [] as info}
         <BlogCard {info}></BlogCard>
       {/each}
     </div>
@@ -32,7 +32,7 @@
   <div>
     <h2 class="text-4xl font-bold font-body">Top Projects</h2>
     <div class="mt-8 flex flex-col gap-8">
-      {#each data.project_infos as info}
+      {#each data.project_infos ?? [] as info}
         <a href={info.link}><ProjectCard {info}></ProjectCard></a>
       {/each}
     </div>

@@ -1,15 +1,19 @@
-let blog_infos: BlogInfo[] = [
+let blogs: Blog[] = [
   {
     title: "Yet another article",
     description: "This is a description of the article",
     tags: ["Frontend", "Svelte", "Typescript", "Programming"],
     id: "other-article",
+    content: "content",
+    date: new Date(Date.now()),
   },
   {
     title: "Rust article",
     description: "This is a description of the article",
     tags: ["Rust", "Backend", "Programmming"],
     id: "rust-article",
+    content: "other content",
+    date: new Date(Date.now()),
   },
 ];
 
@@ -56,11 +60,22 @@ export function getProjectInfos(): ProjectInfo[] {
 }
 
 export function getBlogInfos(tag: string | null): BlogInfo[] {
-  return tag
-    ? blog_infos.filter((blog) => blog.tags.includes(tag))
-    : blog_infos;
+  return tag ? blogs.filter((blog) => blog.tags.includes(tag)) : blogs;
 }
 
-export function getBlogInfo(id: string): BlogInfo | undefined {
-  return blog_infos.find((blog) => blog.id === id);
+export function getBlog(
+  id: string,
+  content: boolean = false,
+): Blog | BlogInfo | undefined {
+  const blog = blogs.find((blog) => blog.id === id);
+  if (!blog) return undefined;
+  return content
+    ? blog
+    : {
+        title: blog.title,
+        tags: blog.tags,
+        description: blog.description,
+        id: blog.id,
+        date: blog.date,
+      };
 }
