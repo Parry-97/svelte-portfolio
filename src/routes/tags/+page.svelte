@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { invalidate } from "$app/navigation";
   import { fly } from "svelte/transition";
   let { data } = $props();
 </script>
@@ -20,7 +19,7 @@
     {#each data.tags ?? [] as tag}
       <a
         href={`/tags/${tag.toLowerCase().replace(" ", "-")}`}
-        class="text-gray-500 font-body text-xs hover:text-white"
+        class="text-gray-500 font-body text-xs hover:text-blue-400 dark:hover:text-white"
         >{tag.toUpperCase()}</a
       >
     {/each}

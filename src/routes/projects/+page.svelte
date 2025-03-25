@@ -17,7 +17,11 @@
   <h1 class="text-5xl font-bold font-body">Projects</h1>
   <p class="font-body text-gray-500">
     Hey, I'm Param. I'm a Software Engineer, blogger and tinkerer. Here are some
-    of the projects I've been working on.
+    of the projects I've worked on. Most of them are hosted on Github. Feel free
+    to check them out <a
+      class="text-blue-400 underline"
+      href="https://github.com/Parry-97">here</a
+    >
   </p>
 
   <div class="flex w-full items-center space-x-2">

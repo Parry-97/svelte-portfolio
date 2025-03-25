@@ -17,7 +17,7 @@
     {#each info.tags as tag}
       <a
         href={`/tags/${tag.toLowerCase()}`}
-        class="text-gray-500 font-body text-xs hover:text-white"
+        class="text-gray-500 font-body text-xs hover:text-blue-400 dark:hover:text-white"
         onclick={(evt) => {
           evt.stopPropagation();
           invalidate("/tags/");

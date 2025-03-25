@@ -9,14 +9,23 @@
 >
   <h1 class="text-5xl font-bold font-body">About me</h1>
   <p class="font-body text-gray-500 mt-3">
-    Hey, I'm Sveltekit Blogger. I'm a Software Developer, writer and creator of
-    Sveltekit Starter Project and Sveltekit Blog Project The template has all
-    the route and sample pages setup for you which you can change and customize
-    further. All the pages are by default loaded from the different JS file and
-    is fetched using prefetch when use hover over the links, which reduces the
-    load time when user eventually decides to click on the link and load the
-    route <a class="text-blue-400 underline" href="/about"
-      >learn more about me</a
-    >
+    Hey, I'm Param. I'm a coder, blogger beginner, student, life-long learner. I
+    work for Capgemini as a Software Engineer. I consider myself an amateur
+    Rustacean, a not so bad Cloud and DevOps Engineer, a full stack developer
+    and aspiring Kaggle GM. I love coding, writing, reading, and learning new
+    things. I'm a big fan of Rust, AI, MLOps, Cloud Computing. I use Python
+    because we have to, but wouldn't consider myself a Pythonista.
+    <br />
+    <br />
+    Over my professional experience, I've worked on a variety of projects ranging
+    from web development with Rust/Actix, Python/FastAPI, .NET Core and React, Cloud
+    infrastructure provisioning with Terraform or Bicep , generative AI applications
+    with Python and CrewAI. I've tried to absord as much as possible from all these
+    experiences to enrich my knowledge and skills.
+    <br />
+    <br />
+    This website is intended as a combination of a portfolio but also my thoughts,
+    experiences, and learnings I've gathered and will continue to along this journey.
+    I hope you find something useful here.
   </p>
 </div>
