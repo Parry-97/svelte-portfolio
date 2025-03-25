@@ -3,6 +3,20 @@ import { createHighlighter } from "shiki";
 import adapter from "@sveltejs/adapter-auto";
 import { vitePreprocess } from "@sveltejs/vite-plugin-svelte";
 
+const highlighter = await createHighlighter({
+  themes: ["rose-pine"],
+  langs: [
+    "javascript",
+    "terraform",
+    "bicep",
+    "json",
+    "yaml",
+    "rust",
+    "python",
+    "typescript",
+  ],
+});
+
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
   // Consult https://svelte.dev/docs/kit/integrations
@@ -13,24 +27,11 @@ const config = {
       extensions: [".md"],
       highlight: {
         highlighter: async (code, lang) => {
-          const highlighter = await createHighlighter({
-            themes: ["rose-pine"],
-            langs: [
-              "javascript",
-              "terraform",
-              "bicep",
-              "json",
-              "yaml",
-              "rust",
-              "python",
-              "typescript",
-            ],
-          });
           await highlighter.loadLanguage(lang);
           const html = escapeSvelte(
             highlighter.codeToHtml(code, { lang, theme: "rose-pine" }),
           );
-          return `<div>{@html \`${html}\` }</div>`;
+          return `{@html \`${html}\` }`;
         },
       },
     }),
