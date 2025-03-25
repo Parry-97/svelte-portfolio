@@ -10,8 +10,6 @@
     >{info.title}</a
   >
   <p class="font-body mt-3 text-gray-500">
-    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis minus
-    culpa debitis minima, illum dignissimos quasi similique sapiente iusto,
     {info.description}
   </p>
 
