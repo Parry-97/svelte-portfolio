@@ -9,7 +9,7 @@
 <div
   in:fly={{ x: -200, duration: 300, delay: 300 }}
   out:fly={{ x: 200, duration: 300 }}
-  class="col-span-1 col-start-2 flex flex-col gap-14"
+  class="col-span-4 col-start-4 flex flex-col gap-14"
 >
   <h1 class="text-5xl font-bold font-body">Hey, I'm Param</h1>
   <p class="font-body text-gray-500 mt-8">

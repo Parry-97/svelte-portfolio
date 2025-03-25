@@ -28,8 +28,7 @@ struct MyType {
 
 impl Drop for MyType {
     fn drop(&mut self) {
-        let moved_data = self.data; // ILLEGAL: Moving out of `self.data`
-        // `self` must be intact when `Drop::drop` completes.
+        let moved_data = self.data;
     }
 }
 ```

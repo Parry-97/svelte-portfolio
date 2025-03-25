@@ -36,7 +36,7 @@
     </div>
   </nav>
 
-  <div class="mt-6 grid grid-cols-3 h-full align-middle">
+  <div class="mt-6 grid grid-cols-10 h-full align-middle">
     {@render children()}
   </div>
 
