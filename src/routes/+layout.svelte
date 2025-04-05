@@ -7,6 +7,7 @@
   let { children } = $props();
   import { ModeWatcher, toggleMode } from "mode-watcher";
   import { Separator } from "$lib/components/ui/separator";
+  import logo from "$lib/assets/logo.png";
 </script>
 
 <ModeWatcher></ModeWatcher>
@@ -27,8 +28,10 @@
       />
       <span class="sr-only">Toggle theme</span>
     </Button>
-    <div class="col-start-3 col-span-1 row-start-2">Logo</div>
-    <div class="flex gap-5 col-start-5 col-span-1 row-start-2">
+    <div class="col-start-3 col-span-1 row-start-2">
+      <img class="h-10" src={logo} alt="greek letter psi" />
+    </div>
+    <div class="flex align-middle gap-5 col-start-5 col-span-1 row-start-2">
       <a class="hover:underline" href="/">Home</a>
       <a class="hover:underline" href="/about">About</a>
       <a class="hover:underline" href="/blogs">Blogs</a>
