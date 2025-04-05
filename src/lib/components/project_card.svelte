@@ -10,8 +10,6 @@
   <Card.Content>
     <p class="text-gray-600 dark:text-gray-300">
       {info.description}
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex obcaecati architecto
-      modi sapiente voluptatibus quisquam vel ducimus fugiat quam
     </p>
   </Card.Content>
 </Card.Root>

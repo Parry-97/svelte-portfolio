@@ -1,36 +1,20 @@
-// let blogs: Blog[] = [
-//   {
-//     title: "Yet another article",
-//     description: "This is a description of the article",
-//     tags: ["Frontend", "Svelte", "Typescript", "Programming"],
-//     id: "other-article",
-//     content: "content",
-//     date: new Date(Date.now()),
-//   },
-//   {
-//     title: "Rust article",
-//     description: "This is a description of the article",
-//     tags: ["Rust", "Backend", "Programmming"],
-//     id: "rust-article",
-//     content: "other content",
-//     date: new Date(Date.now()),
-//   },
-// ];
-//
 let project_infos: ProjectInfo[] = [
   {
     title: "Rusty Leetcode",
-    description: "This is a description of the article",
+    description:
+      "Collection with solutions to common Leetcode style problems in Rust. Follows the roadmap from NeetCode.io",
     link: "https://github.com/Parry-97/rusty-neetcode",
   },
   {
     title: "Simpla",
-    description: "This is a description of the article",
+    description:
+      "Project for a compiler written in C for a simple procedural, statically typed language language",
     link: "https://github.com/Parry-97/SimpLA",
   },
   {
     title: "Fintech in Rust",
-    description: "This is a description of the article",
+    description:
+      "Learning backend project developed in Rust for Manning Live Projects",
     link: "https://github.com/Parry-97/fintech-rust",
   },
 ];
