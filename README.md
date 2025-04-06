@@ -8,7 +8,7 @@
   - [Building](#building)
   <!--toc:end-->
 
-This is a portfolio/blog website I built from scratch using [SvelteKit](https://svelte.dev/docs/kit/introduction). Inspired by the template from [SvelteKit Blogger](urlhttps://sveltekit-blog-starter.vercel.app/)
+This is a portfolio/blog website I built from scratch using [SvelteKit](https://svelte.dev/docs/kit/introduction).
 
 ## Tools
 
