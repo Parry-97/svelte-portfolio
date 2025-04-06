@@ -18,7 +18,7 @@
   <p class="font-body text-gray-500">
     Hey, I'm Param. I'm a Software Engineer, blogger and tinkerer. Here are some
     of the projects I've worked on. Most of them are hosted on Github. Feel free
-    to check them out <a
+    to check them out at my Github profile page <a
       class="text-blue-400 underline"
       href="https://github.com/Parry-97">here</a
     >
