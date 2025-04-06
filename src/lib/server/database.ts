@@ -2,20 +2,26 @@ let project_infos: ProjectInfo[] = [
   {
     title: "Rusty Leetcode",
     description:
-      "Collection with solutions to common Leetcode style problems in Rust. Follows the roadmap from NeetCode.io",
+      "Collection of solutions to common Leetcode style problems in Rust. Follows the roadmap from NeetCode.io",
     link: "https://github.com/Parry-97/rusty-neetcode",
-  },
-  {
-    title: "Simpla",
-    description:
-      "Project for a compiler written in C for a simple procedural, statically typed language language",
-    link: "https://github.com/Parry-97/SimpLA",
   },
   {
     title: "Fintech in Rust",
     description:
       "Learning backend project developed in Rust for Manning Live Projects",
     link: "https://github.com/Parry-97/fintech-rust",
+  },
+  {
+    title: "Svelte Portfolio",
+    description:
+      "Portfolio / Blog website built from scratch using SvelteKit, shadcn-svelte, Tailwind CSS",
+    link: "https://github.com/Parry-97/SimpLA",
+  },
+  {
+    title: "Simpla",
+    description:
+      "Compiler, written in C with the help of Yacc and Lex, for a simple procedural, statically typed language language",
+    link: "https://github.com/Parry-97/SimpLA",
   },
 ];
 
