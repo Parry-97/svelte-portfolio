@@ -1,22 +1,29 @@
-# sv
+# Svelte Portfolio
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+<!--toc:start-->
 
-## Creating a project
+- [Svelte Portfolio](#svelte-portfolio)
+  - [Tools](#tools)
+  - [Developing](#developing)
+  - [Building](#building)
+  <!--toc:end-->
 
-If you're seeing this, you've probably already done this step. Congrats!
+This is a portfolio/blog website I built from scratch using [SvelteKit](https://svelte.dev/docs/kit/introduction). Inspired by the template from [SvelteKit Blogger](urlhttps://sveltekit-blog-starter.vercel.app/)
 
-```bash
-# create a new project in the current directory
-npx sv create
+## Tools
 
-# create a new project in my-app
-npx sv create my-app
-```
+The main tools that I've used are:
+
+- [pnpm]() as my package manager of choice
+- [SvelteKit](url) as the server-side framework for Svelte
+- [Tailwind CSS](url) as my preferred 'CSS framework'
+- [shadcn-svelte](url) for the beautiful pre-built components
+- [mdsvex]() for Markdown rendering
+- [Vercel](url) as the easiest deployment option out there
 
 ## Developing
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+In case you might want to give it you personal spin, feel free to clone the project, install dependencies with `npm install` (or `pnpm install` or `yarn`) and start a development server:
 
 ```bash
 npm run dev
