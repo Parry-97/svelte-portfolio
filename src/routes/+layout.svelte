@@ -15,7 +15,7 @@
 <div class="flex flex-col">
   <nav class="font-body mt-4 grid grid-cols-7">
     <Button
-      class="col-span-1 row-start-1 col-start-8"
+      class="col-span-1 row-start-2 justify-self-end col-start-6 md:col-start-8"
       on:click={toggleMode}
       variant="outline"
       size="icon"
@@ -28,10 +28,12 @@
       />
       <span class="sr-only">Toggle theme</span>
     </Button>
-    <div class="col-start-3 col-span-1 row-start-2">
+    <div class="md:col-start-3 col-start-2 col-span-1 row-start-2">
       <img class="h-10" src={logo} alt="greek letter psi" />
     </div>
-    <div class="flex align-middle gap-5 col-start-5 col-span-1 row-start-2">
+    <div
+      class="hidden md:visible md:flex align-middle gap-5 col-start-5 col-span-1 row-start-2"
+    >
       <a class="hover:underline" href="/">Home</a>
       <a class="hover:underline" href="/about">About</a>
       <a class="hover:underline" href="/blogs">Blogs</a>
@@ -46,28 +48,29 @@
   <Separator class="w-1/3 mx-auto mt-10"></Separator>
 
   <footer class="self-end mt-10 pb-20 w-1/3 mx-auto text-gray-500 font-body">
-    <div class="grid grid-cols-3 w-full">
-      <div class="flex flex-col gap-5 col-start-1 col-span-1">
-        <a class="hover:underline" href="/">Home</a>
-        <a class="hover:underline" href="/about">About</a>
-        <a class="hover:underline" href="/blogs">Blogs</a>
-        <a class="hover:underline" href="/projects">Projects</a>
-      </div>
+    <div class="grid gap-x-5 gap-y-5 grid-cols-2 md:grid-cols-3 w-full">
+      <a class="hover:underline col-start-1" href="/">Home</a>
+      <a class="hover:underline col-start-1" href="/about">About</a>
+      <a class="hover:underline col-start-1" href="/blogs">Blogs</a>
+      <a class="hover:underline col-start-1" href="/projects">Projects</a>
 
-      <div class="flex flex-col gap-5 col-start-2">
-        <a
-          class="hover:underline"
-          href="https://www.linkedin.com/in/param-pal-singh-251324212/"
-          >Linkedin</a
-        >
-        <a class="hover:underline" href="https://github.com/Parry-97">Github</a>
-        <!-- <a class="hover:underline" href="/about">Twitter</a> -->
-      </div>
+      <a
+        class="hover:underline col-start-2 row-start-1"
+        href="https://www.linkedin.com/in/param-pal-singh-251324212/"
+        >Linkedin</a
+      >
+      <a
+        class="hover:underline col-start-2 row-start-2"
+        href="https://github.com/Parry-97">Github</a
+      >
 
-      <div class="flex flex-col gap-5 col-start-3">
-        <a class="hover:underline" href="/snippets">Snippets</a>
-        <a class="hover:underline" href="/tags">Tags</a>
-      </div>
+      <a
+        class="hover:underline col-start-2 row-start-3 md:col-start-3 md:row-start-1"
+        href="/snippets">Snippets</a
+      >
+      <a class="hover:underline md:col-start-3 md:row-start-2" href="/tags"
+        >Tags</a
+      >
     </div>
   </footer>
 </div>
