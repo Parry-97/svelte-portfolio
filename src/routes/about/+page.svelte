@@ -12,8 +12,9 @@
     Hey, I'm Param. I'm a coder, blogger beginner, student, life-long learner. I
     work for Capgemini as a Software Engineer. I consider myself an amateur
     Rustacean, a not so bad Cloud and DevOps Engineer, a good full stack
-    developer and aspiring Kaggle GM. I love coding, reading, and learning new
-    things. I'm a big fan of Rust, AI, MLOps, Cloud Computing.
+    developer and aspiring Kaggle GM ( would be cool since probably can't become
+    a chess GM ). I love coding, chess, anime, reading and learning new stuff.
+    I'm a big fan of Rust, AI, MLOps, Cloud Computing.
     <br />
     <br />
     Over my professional experience, I've worked on a variety of projects ranging
@@ -26,6 +27,10 @@
     This website, written entirely from scratch with SvelteKit, is intended as a
     portfolio website but also a blog to share my thoughts, experiences, and learnings
     I've gathered and will continue to gather along my journey. I sincerely hope
-    you find something useful here.
+    you find something useful here. You can reach out through my email
+    <a
+      class="text-blue-400 dark:text-white hover:underline"
+      href="mailto:singhparampal97@gmail.com">singhparampal97@gmail.com</a
+    >
   </p>
 </div>
