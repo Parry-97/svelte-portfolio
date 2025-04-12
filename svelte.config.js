@@ -4,7 +4,7 @@ import adapter from "@sveltejs/adapter-auto";
 import { vitePreprocess } from "@sveltejs/vite-plugin-svelte";
 
 const highlighter = await createHighlighter({
-  themes: ["rose-pine"],
+  themes: ["poimandres"],
   langs: [
     "javascript",
     "terraform",
@@ -29,7 +29,7 @@ const config = {
         highlighter: async (code, lang) => {
           await highlighter.loadLanguage(lang);
           const html = escapeSvelte(
-            highlighter.codeToHtml(code, { lang, theme: "rose-pine" }),
+            highlighter.codeToHtml(code, { lang, theme: "poimandres" }),
           );
           return `{@html \`${html}\` }`;
         },
